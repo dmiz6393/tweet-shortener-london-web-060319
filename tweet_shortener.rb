@@ -24,7 +24,14 @@ end
 tweet_a.join(" ")
 end 
 
-def bulk_tweet_shortener
+def bulk_tweet_shortener(tweet)
+  tweet_a= tweet.split.collect do |words|
+if dictionary.keys.include?(words.downcase)
+      words = dictionary[words.downcase]
+ else words 
+end 
+end 
+puts tweet_a.join(" ")
 end 
 
 def selective_tweet_shortener 
